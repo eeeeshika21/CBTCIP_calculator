@@ -23,6 +23,9 @@ var screen=document.querySelector('#screen');
             }
         });
     }
+    function mod(){
+        screen.value = (-parseFloat(screen.value)).toString();
+    }
 
     function sin()
     {
