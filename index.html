@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-radio">
+            <label for="calc-mode">Scientific Mode</label>
+            <input type="checkbox" id="calc-mode">
+        </div>
+        <div class="row">
+            <input type="text" id="screen">
+        </div>
+        <div class="calculator-slide basic active slide">
+            <div class="row">
+                <button class="operator" onclick="screen.value=''">AC</button>
+                <button class="operator" onclick="mod()">+/-</button>
+                <button class="operator" onclick="percent()">%</button>
+                <button class="button">÷</button>
+            </div>
+            <div class="row">
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button">x</button>
+            </div>
+            <div class="row">
+                <button class="button">6</button>
+                <button class="button">5</button>
+                <button class="button">4</button>
+                <button class="button">+</button>
+            </div>
+            <div class="row">
+                <button class="button">3</button>
+                <button class="button">2</button>
+                <button class="button">1</button>
+                <button class="button">-</button>
+            </div>
+            <div class="row">
+                <button class="button">0</button>
+                <button class="button">.</button>
+                <button class="button" onclick="screen.value=eval(screen.value)">=</button>
+                <button class="operator" onclick="backspc()">CE</button>
+            </div>
+        </div>
+        <div class="calculator-slide scientific slide">
+            <div class="row">
+                <button class="operator" onclick="screen.value=''">AC</button>
+                <button class="button">&#41;</button>
+                <button class="button">&#40;</button>
+                <button class="operator" onclick="pi()">&pi;</button>
+            </div>
+            <div class="row">
+                <button class="operator"onclick="fact()">&excl;</button>
+                <button class="operator" onclick="ln()">ln</button>
+                <button class="operator" onclick="log()">log</button>
+                <button class="operator" onclick="sin()">sin</button>
+            </div>
+            <div class="row">
+                <button class="operator" onclick="tan()">tan</button>
+                <button class="operator" onclick="cos()">cos</button>
+                <button class="operator" onclick="round()">rnd</button>
+                <button class="operator" onclick="e()">e</button>
+            </div>
+            <div class="row">
+                <button class="operator" onclick="sqrt()">&radic;</button>
+                <button class="operator" onclick="exp()">x<sup>x</sup></button>
+                <button class="operator" onclick="pow()">x<sup>2</sup></button>
+                <button class="operator" onclick="ex()">e<sup>x</sup></button>
+            </div>
+            <div class="row">
+                <button class="operator" onclick="x10()">10<sup>x</sup></button>
+                <button class="button">00</button>
+                <button class="operator" onclick="screen.value=eval(screen.value)">=</button>
+                <button class="operator" onclick="backspc()">CE</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
